@@ -9,7 +9,6 @@ import Button from '../Button';
 describe('Button', () => {
     it('test_default_props', () => {
         const btn = render(<Button label='hola' />);
-        console.log(btn.container.innerHTML);
         
         expect(btn).toBeDefined();
     });
