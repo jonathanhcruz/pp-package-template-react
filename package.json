@@ -41,8 +41,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest --watch",
-    "coverage": "vitest --coverage",
+    "test": "vitest",
+    "test-watch": "vitest --watch",
+    "test-coverage": "vitest --coverage",
     "test-ui": "vitest --ui --watch --coverage"
   },
   "dependencies": {
