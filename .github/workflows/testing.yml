@@ -8,7 +8,15 @@ jobs:
     steps:
       - uses: morrisoncole/pr-lint-action@v1.6.1
         with:
-          node-version: 18.13.0
+          node-version: 18
+          title-regex: "#[eE][xX]-[0-9]+"
+          on-failed-regex-fail-action: false
+          on-failed-regex-request-changes: false
+          on-failed-regex-create-review: true
+          on-failed-regex-comment:
+            "something went wrong: `%regex%`!"
+          on-succeeded-regex-dismiss-review-comment:
+            "Done, Success!"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
       - run: npm install
       - run: npm run test
