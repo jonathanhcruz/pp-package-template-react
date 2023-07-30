@@ -1,15 +1,14 @@
 name: testing
 on:
   pull_request:
-    branches: [ main, implement-git-actions ]
-jobs: 
+    types: [opened, edited, reopened, synchronize]
+jobs:
   check-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: morrisoncole/pr-lint-action@v1.6.1
         with:
           node-version: 18.13.0
-      - run: npm install 
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - run: npm install
       - run: npm run test
-```
