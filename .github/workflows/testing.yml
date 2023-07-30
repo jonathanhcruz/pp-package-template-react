@@ -5,8 +5,15 @@ on:
 jobs:
   check-test:
     runs-on: ubuntu-latest
+    permissions:
+      # Required to checkout the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
     steps:
+      # checkout the code
       - uses: actions/checkout@v3
+      - name: 'Install node 18'
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -19,6 +26,11 @@ jobs:
           on-succeeded-regex-dismiss-review-comment:
             "Done, Success!"
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: 'Install dependencies and run tests'
       - run: npm install
-      - run: npm run test
+      - name: 'Run tests'
+      - run: npm run test-coverage
+      name: 'Report Coverage'
+      if: always() 
+      uses:  davelosert/vitest-coverage-report-action@v2
       
