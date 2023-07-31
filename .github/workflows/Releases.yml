@@ -1,9 +1,8 @@
 name: Releases
 on:
-  merge:
+  push:
     branches:
-      - main
-    types: [push]
+      - "main"
 jobs:
   tagged-release:
     name: "Tagged Release"
@@ -14,6 +13,5 @@ jobs:
         prerelease: false
         automatic_release_tag: true
         automatic_release_tag_prefix: "v"
-        automatic_release_tag_suffix: ""
         
   
