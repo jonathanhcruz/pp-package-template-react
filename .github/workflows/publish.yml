@@ -23,14 +23,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5
+        id: drafter
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: curl "$GITHUB_CONTEXT"
+      # echo the github context to the console
+      - run: echo ${{ toJson(drafter) }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_CONTEXT: ${{ toJson(github.repository.releases_url) }}
       # - run: npm publish --version "$GITHUB_CONTEXT"
