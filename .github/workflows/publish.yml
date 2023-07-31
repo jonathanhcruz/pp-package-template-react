@@ -16,8 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - uses: pozetroninc/github-action-get-latest-release@v0.7.0
-      - run: echo ${{ github.release.version }}
+      - run: echo ${{ github.ref }}
       # - run: npm i
       # - run: npm run build
 
