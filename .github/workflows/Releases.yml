@@ -1,8 +1,8 @@
 name: releases
 on:
-  push:
+  merge:
     branches:
-      - "main"
+      - main
 jobs:
   tagged-release:
     name: "Tagged Release"
