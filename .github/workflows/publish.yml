@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: echo ${{ github.ref }}
+      - run: echo '${{ github.ref }} hola'
       # - run: npm i
       # - run: npm run build
 
