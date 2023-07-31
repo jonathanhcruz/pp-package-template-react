@@ -3,17 +3,11 @@ on:
   pull_request:
     types: [ closed ]
 jobs:
-  tagged-release:
+  update_release_draft:
     runs-on: ubuntu-latest
     steps:
-      - name: Automatic Releases
-      # checkout code
-      - name: Checkout code
-      - uses: actions/checkout@master
-      # automatic release
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: release-drafter/release-drafter@v5
         with:
-          automatic_release_tag: "latest"
-          automatic_release_tag_prefix: "v"
-          prerelease: true
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          config-name: release-drafter.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
