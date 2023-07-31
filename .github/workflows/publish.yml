@@ -34,4 +34,4 @@ jobs:
       - run: npm publish --version $VERSION_RELEASE
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          VERSION_RELEASE: ${{ toJson(steps.drafter.outputs.'version-without-v') }}
+          VERSION_RELEASE: ${{ toJson(steps.drafter.outputs.version-without-v) }}
