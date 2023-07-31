@@ -3,17 +3,17 @@ on:
   release:
     types: [ published ]
 jobs:
-    build: 
+  build: 
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-        with:
-            node-version: 18
-            registry-url: 'https://github.com/jonathanhcruz/sheep-ui-components'
-        - run: npm ci
-        - run: npm publish
-        env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-            NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        registry-url: 'https://github.com/jonathanhcruz/sheep-ui-components'
+      - run: npm ci
+      - run: npm publish
+      env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
