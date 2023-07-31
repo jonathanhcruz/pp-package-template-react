@@ -5,8 +5,6 @@ commitish: 'main'
 template: |
   ## What’s Changed
   $CHANGES
-  ## Contributors
-  $CONTRIBUTORS
 categories:
   - title: '🎊 Features'
     labels:
