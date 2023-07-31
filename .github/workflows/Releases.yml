@@ -1,13 +1,14 @@
 name: releases
 on:
   pull_request:
-    types: [ closed ]
+    types: [ merged ]
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5
         with:
-          config-name: release-drafter.yml
+          config-name: relese-config.yml
+          disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
