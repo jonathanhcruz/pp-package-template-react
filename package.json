@@ -7,7 +7,8 @@
   "license": "MIT",
   "author": "Jonathan Cruz",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://www.npmjs.com/package/sheep-ui-components"
   },
   "files": [
     "dist",
