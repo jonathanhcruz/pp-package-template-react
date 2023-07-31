@@ -14,25 +14,29 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+      - name: Get Latest Release
+      - uses: pozetroninc/github-action-get-latest-release@v0.7.0
         with:
-          node-version: 18
-      - run: npm i
-      - run: npm run build
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      # - run: npm publish --version  ${{ github.ref }}
-      - run: ${{ github.ref }}
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          repository: ${{ github.release.version }}
+      with:
+        node-version: 18
+      - run: ${{ github.release.version }}
+      # - run: npm i
+      # - run: npm run build
+      
+  # publish-npm:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
+  #         registry-url: https://registry.npmjs.org/
+  #     - run: npm ci
+  #     # - run: npm publish --version  ${{ github.ref }}
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     
   # publish-gpr:
   #   needs: build
