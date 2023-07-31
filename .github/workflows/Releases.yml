@@ -1,0 +1,17 @@
+name: releases
+on:
+  merge:
+    branches:
+      - main
+jobs:
+  tagged-release:
+    name: "Tagged Release"
+    steps:
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        automatic_release_tag: true
+        automatic_release_tag_prefix: "v"
+        
+  
