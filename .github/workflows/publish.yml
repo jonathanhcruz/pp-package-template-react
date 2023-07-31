@@ -30,9 +30,8 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      # echo the github context to the console
-      - run: echo $VERSION_RELEASE
+      # - run: echo $VERSION_RELEASE
+      - run: npm publish --version $VERSION_RELEASE
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          VERSION_RELEASE: ${{ toJson(steps.drafter.outputs.version) }}
-      # - run: npm publish --version $VERSION_RELEASE
+          VERSION_RELEASE: ${{ toJson(steps.drafter.outputs."version-without-v") }}
