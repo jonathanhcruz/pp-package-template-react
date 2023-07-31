@@ -12,7 +12,7 @@ jobs:
       - name: Automatic Releases
       # checkout code
       - name: Checkout code
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
       # automatic release
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
