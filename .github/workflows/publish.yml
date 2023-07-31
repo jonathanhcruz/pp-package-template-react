@@ -29,6 +29,8 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish --version  ${{ github.event.release.tag_name }}
+      - run: echo "$GITHUB_CONTEXT"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      # - run: npm publish --version "$GITHUB_CONTEXT"
