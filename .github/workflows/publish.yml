@@ -12,12 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - id: get_version
+      uses: battila7/get-version-action@v2
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - id: get_version
-      uses: battila7/get-version-action@v2
       - run: echo '${{ steps.get_version.outputs.version }} setup'
       - run: echo '${{ github.refs.heads.release }} github.refs.heads.release'
       # - run: npm i
