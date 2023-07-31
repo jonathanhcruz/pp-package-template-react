@@ -12,30 +12,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: battila7/get-version-action@v2
         id: get_version
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: echo '${{ steps.get_version.outputs.version }} setup'
-      - run: echo ${{ steps.get_version.outputs.version-without-v }}
-      - run: echo '${{ github.refs.heads.release }} github.refs.heads.release'
-      # - run: npm i
-      # - run: npm run build
-
-  # publish-npm:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
-  #         registry-url: https://registry.npmjs.org/
-  #     - run: npm ci
-  #     # - run: npm publish --version  ${{ github.ref }}
-  #     - run: echo ${{ github.ref }}
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  #         PACKAGE_VERSION: ${{ github.ref }}
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --version  ${{ PACKAGE_VERSION }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_VERSION: ${{ steps.get_version.outputs.version-without-v }}
