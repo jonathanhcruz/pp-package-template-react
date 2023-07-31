@@ -7,7 +7,6 @@ on:
       - main
       - implement-git-actions
       
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,14 +22,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: battila7/get-version-action@v2
-        id: get_version
+      - uses: release-drafter/release-drafter@v5
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish --version  ${{ steps.get_version.outputs.version-without-v }}
+      - run: npm publish --version  ${{ github.event.release.tag_name }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
