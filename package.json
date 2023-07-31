@@ -2,7 +2,7 @@
   "name": "sheep-ui-components",
   "private": false,
   "description": "A UI component library built with React and TypeScript.",
-  "version": "$VERSION_RELEASE",
+  "version": "0.1.5",
   "type": "module",
   "license": "MIT",
   "author": "Jonathan Cruz",
