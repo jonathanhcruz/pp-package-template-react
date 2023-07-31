@@ -11,9 +11,9 @@ jobs:
     steps:
         - uses: actions/checkout@v3
         - uses: actions/setup-node@v3
-            with:
-                node-version: 18
-                registry-url: 'https://www.npmjs.com/package/sheep-ui-components'
+        with:
+            node-version: 18
+            registry-url: 'https://github.com/jonathanhcruz/sheep-ui-components'
         - run: npm ci
         - run: npm publish
         env:
