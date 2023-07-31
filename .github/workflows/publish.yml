@@ -29,7 +29,8 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish --version ${{ '$RESOLVED_VERSION' }}
+      # - run: npm publish --version  ${{ github.ref }}
+      - run: ${{ github.ref }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     
