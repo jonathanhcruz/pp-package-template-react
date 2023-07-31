@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: release-drafter/release-drafter@v5
         with:
-          config-name: relese-config.yml
+          config-name: config/relese-config.yml
           disable-autolabeler: true
           publish: true
         env:
