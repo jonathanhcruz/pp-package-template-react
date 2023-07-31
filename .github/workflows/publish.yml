@@ -31,7 +31,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       # echo the github context to the console
-      - run: echo ${{ toJson(drafter) }}
+      - run: echo $VERSION_RELEASE
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VERSION_RELEASE: ${{ toJson(steps.drafter) }}
       # - run: npm publish --version "$GITHUB_CONTEXT"
