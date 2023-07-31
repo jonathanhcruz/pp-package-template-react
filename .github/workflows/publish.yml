@@ -34,5 +34,5 @@ jobs:
       - run: echo $VERSION_RELEASE
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          VERSION_RELEASE: ${{ toJson(steps.drafter) }}
+          VERSION_RELEASE: ${{ toJson(steps.drafter.outputs) }}
       # - run: npm publish --version "$GITHUB_CONTEXT"
