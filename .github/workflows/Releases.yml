@@ -1,7 +1,7 @@
 name: releases
 on:
   pull_request:
-    types: [ merged ]
+    types: [ closed ]
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
@@ -9,6 +9,5 @@ jobs:
       - uses: release-drafter/release-drafter@v5
         with:
           config-name: relese-config.yml
-          disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
