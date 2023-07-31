@@ -1,10 +1,11 @@
 name: publish Package
 
 on:
-  # release:
-  #   types: [created]
+
   push:
-    branches:[ main, implement-git-actions]
+    branches:
+      - main
+      
 
 jobs:
   build:
