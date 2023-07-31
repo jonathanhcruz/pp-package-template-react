@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          title-regex: "#[eE][xX]-[0-9]+"
+          'title-regex: "#[eE][xX]-[0-9]+"
           on-failed-regex-fail-action: false
           on-failed-regex-request-changes: false
           on-failed-regex-create-review: true
