@@ -5,9 +5,7 @@ on:
 jobs:
     build: 
     runs-on: ubuntu-latest
-    permissions:
-        packages: write
-        contents: read
+    permissions: write-all
     steps:
         - uses: actions/checkout@v3
         - uses: actions/setup-node@v3
