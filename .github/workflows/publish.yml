@@ -1,4 +1,5 @@
-name: publish
+name: publish-package
+
 on:
   release:
     types: [published]
