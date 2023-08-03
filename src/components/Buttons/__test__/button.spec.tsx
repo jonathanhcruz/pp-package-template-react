@@ -4,7 +4,7 @@ import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react'
 
 // Component
-import Button from '../Button';
+import {Button} from 'src/';
 
 describe('Button', () => {
     it('test_default_props', () => {

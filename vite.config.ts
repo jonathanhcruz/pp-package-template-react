@@ -5,9 +5,14 @@ import sass from 'sass'
 
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      src: path.resolve('src/'),
+    },
+  },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'),
+      entry: path.resolve(__dirname, '/src/index.ts'),
       name: 'My Component',
       fileName: (format) => `sheep-ui-components.${format}.ts`
     },
