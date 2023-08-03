@@ -15,7 +15,6 @@ npm i name-package
 ## Uses
 
 ```tsx
-
 import { component } from "name-package"
 ```
 
@@ -84,6 +83,15 @@ We can use this option to test the components in the terminal.
 ```bash
 npm run test
 ```
+
+### Test-coverage
+
+We can use this option to test the components in the terminal and check the coverage 
+
+```bash
+npm run test-coverage
+```
+
 
 ### Test-watch
 
