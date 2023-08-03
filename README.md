@@ -109,3 +109,12 @@ nom run test-ui
 
 This project has two different implementations: one for creating a pull request and another for when it is finished.
 
+[GITHUB config](./.github/workflows/README.md)
+
+
+
+
+---
+
+### Setup created by [@jonathanhcruz](https://github.com/jonathanhcruz)
+ 
