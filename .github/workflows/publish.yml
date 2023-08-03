@@ -1,6 +1,6 @@
-name: releases and publish
+name: publish
 on:
-  
+
   release:
     types:
       - published
