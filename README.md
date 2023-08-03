@@ -1,22 +1,22 @@
-# Sheep Ui components
+# Templete package
 
 This project was created with the intention of simplifying the creation of personal projects and practicing new concepts.
 
 ---
 
-# Install sheep ui component
+# Install package
 
 to install this library it’s only run the next script in your terminal.
 
 ```bash
-npm i sheep-ui-components
+npm i name-package
 ```
 
 ## Uses
 
 ```tsx
 
-import { component } from "sheep-ui-components"
+import { component } from "name-package"
 ```
 
 ---
