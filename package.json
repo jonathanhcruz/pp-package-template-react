@@ -2,7 +2,7 @@
   "name": "sheep-ui-components",
   "private": false,
   "description": "A UI component library built with React and TypeScript.",
-  "version": "0.1.8",
+  "version": "0.1.7",
   "tags": [
     "react",
     "typescript",
