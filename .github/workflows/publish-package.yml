@@ -1,12 +1,11 @@
-name: publish-package
-
+name: Publish to package
 on:
   release:
-    types: [published, created]
-    
+    types: [published]
 jobs:
   build-project:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
