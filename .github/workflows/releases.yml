@@ -1,4 +1,4 @@
-name: releases
+name: create new release
 on:
 
   pull_request:
