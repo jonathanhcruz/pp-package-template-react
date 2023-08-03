@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
+import sass from 'sass'
 
 
 export default defineConfig({
@@ -30,5 +31,12 @@ export default defineConfig({
       exclude: ['**/node_modules/**']
     },
   },
-  plugins: [react()]
+  plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: sass,
+      },
+    },
+  },
 })
