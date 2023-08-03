@@ -36,7 +36,7 @@ import { component } from "name-package"
 
 ---
 
-## Install
+## Environment development
 
 For this project it is important to use **node** in version 18 or higher.
 
@@ -59,6 +59,8 @@ We use workspace isolation in Storybook to construct and document components.
 ```bash
 npm run storybook
 ```
+
+![storybook references!](./public/storybook.png "storybook")
 
 ### Build-storybook
 
@@ -83,6 +85,7 @@ We can use this option to test the components in the terminal.
 ```bash
 npm run test
 ```
+![test references!](./public/test.png "test")
 
 ### Test-coverage
 
@@ -91,6 +94,8 @@ We can use this option to test the components in the terminal and check the cove
 ```bash
 npm run test-coverage
 ```
+
+![test coverage references!](./public/test-coverage.png "test coverage")
 
 
 ### Test-watch
@@ -101,6 +106,8 @@ We can use this option when you want to keep track of changes in the test.
 npm run test-watch
 ```
 
+![test watch references!](./public/test-watch.png "test watch")
+
 ### Test-ui
 
 This option is used when you want to see the test in the web UI.
@@ -109,7 +116,10 @@ This option is used when you want to see the test in the web UI.
 nom run test-ui
 ```
 
- 
+![test ui references!](./public/test-ui.png "test ui")
+
+
+![test ui web references!](./public/test-ui-web.png "test ui web")
 
 ---
 
@@ -119,8 +129,13 @@ This project has two different implementations: one for creating a pull request 
 
 [GITHUB config](./.github/workflows/README.md)
 
+### Test
 
+![Github Action test references!](./public/github-action-test.png "Github Action test")
 
+### Deploy
+
+![Github Action deploy references!](./public/github-action-deploy.png "Github Action deploy")
 
 ---
 
