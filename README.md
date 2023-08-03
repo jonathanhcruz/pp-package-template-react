@@ -36,7 +36,7 @@ import { component } from "name-package"
 
 ---
 
-## Install
+## Environment development
 
 For this project it is important to use **node** in version 18 or higher.
 
@@ -129,8 +129,11 @@ This project has two different implementations: one for creating a pull request 
 
 [GITHUB config](./.github/workflows/README.md)
 
+### Test
 
 ![Github Action test references!](./public/github-action-test.png "Github Action test")
+
+### Deploy
 
 ![Github Action deploy references!](./public/github-action-deploy.png "Github Action deploy")
 
