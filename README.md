@@ -60,7 +60,7 @@ We use workspace isolation in Storybook to construct and document components.
 npm run storybook
 ```
 
-![storybook references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/storybook.png "storybook")
+![storybook references!](./public/storybook.png "storybook")
 
 ### Build-storybook
 
@@ -85,7 +85,7 @@ We can use this option to test the components in the terminal.
 ```bash
 npm run test
 ```
-![test references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/test.png "test")
+![test references!](./public/test.png "test")
 
 ### Test-coverage
 
@@ -95,7 +95,7 @@ We can use this option to test the components in the terminal and check the cove
 npm run test-coverage
 ```
 
-![test coverage references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/test-coverage.png "test coverage")
+![test coverage references!](./public/test-coverage.png "test coverage")
 
 
 ### Test-watch
@@ -106,7 +106,7 @@ We can use this option when you want to keep track of changes in the test.
 npm run test-watch
 ```
 
-![test watch references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/test-watch.png "test watch")
+![test watch references!](./public/test-watch.png "test watch")
 
 ### Test-ui
 
@@ -116,10 +116,10 @@ This option is used when you want to see the test in the web UI.
 nom run test-ui
 ```
 
-![test ui references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/test-ui.png "test ui")
+![test ui references!](./public/test-ui.png "test ui")
 
 
-![test ui web references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/test-ui-web.png "test ui web")
+![test ui web references!](./public/test-ui-web.png "test ui web")
 
 ---
 
@@ -131,11 +131,11 @@ This project has two different implementations: one for creating a pull request 
 
 ### Test
 
-![Github Action test references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/github-action-test.png "Github Action test")
+![Github Action test references!](./public/github-action-test.png "Github Action test")
 
 ### Deploy
 
-![Github Action deploy references!](https://raw.githubusercontent.com/jonathanhcruz/sheep-ui-components/main/public/github-action-deploy.png "Github Action deploy")
+![Github Action deploy references!](./public/github-action-deploy.png "Github Action deploy")
 
 ---
 
