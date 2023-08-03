@@ -1,27 +1,111 @@
-# React + TypeScript + Vite
+# Sheep Ui components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created with the intention of simplifying the creation of personal projects and practicing new concepts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Install sheep ui component
 
-## Expanding the ESLint configuration
+to install this library it’s only run the next script in your terminal.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm i sheep-ui-components
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Uses
+
+```tsx
+
+import { component } from "sheep-ui-components"
+```
+
+---
+
+## Technologies
+
+[Vite](https://github.com/vitejs/vite)
+
+[Typescript](https://www.typescriptlang.org/) 
+
+[SWC](https://swc.rs/) 
+
+[React](https://react.dev/) 
+
+[Vitest](https://vitest.dev/)
+
+[Storybook](https://storybook.js.org/) 
+
+---
+
+## Install
+
+For this project it is important to use **node** in version 18 or higher.
+
+### Install dependencies
+
+```bash
+npm run i 
+```
+
+---
+
+# Scripts
+
+That part is only used in the development process.
+
+### Storybook
+
+We use workspace isolation in Storybook to construct and document components.
+
+```bash
+npm run storybook
+```
+
+### Build-storybook
+
+We can build the project using Storybook and publish this page as documentation.
+
+```bash
+nom run build-storybook
+```
+
+### Build
+
+This option is only for constructing the app to publish it in package stores.
+
+```bash
+npm run build 
+```
+
+### Test
+
+We can use this option to test the components in the terminal.
+
+```bash
+npm run test
+```
+
+### Test-watch
+
+We can use this option when you want to keep track of changes in the test.
+
+```bash
+npm run test-watch
+```
+
+### Test-ui
+
+This option is used when you want to see the test in the web UI.
+
+```bash
+nom run test-ui
+```
+
+ 
+
+---
+
+# GitHub actions
+
+This project has two different implementations: one for creating a pull request and another for when it is finished.
+
