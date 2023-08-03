@@ -11,6 +11,6 @@ jobs:
         with:
           config-name: config/relese-config.yml
           disable-autolabeler: true
-          publish: true
+          publish: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
